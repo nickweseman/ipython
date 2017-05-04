@@ -35,6 +35,12 @@ _ip = get_ipython()
 @magic.magics_class
 class DummyMagics(magic.Magics): pass
 
+# our test code
+def test_e():
+   expected = '2.7'
+   actual = _ip.magic('e')
+   nt.assert_equal(actual, expected)
+
 def test_extract_code_ranges():
     instr = "1 3 5-6 7-9 10:15 17: :10 10- -13 :"
     expected = [(0, 1), 

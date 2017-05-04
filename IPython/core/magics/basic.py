@@ -159,6 +159,19 @@ class BasicMagics(Magics):
                 magic_escapes['cell'], name,
                 magic_escapes['cell'], target))
 
+    @skip_doctest
+    @line_magic
+    def e(self, parameter_s=''):
+        """Return everyone's favorite mathematical constant, e.
+        Examples
+        -------------
+
+        ::
+        In[1]: e
+        Out[1]: '2.7'
+        """
+        return '2.7'
+
     @line_magic
     def lsmagic(self, parameter_s=''):
         """List currently available magic functions."""
